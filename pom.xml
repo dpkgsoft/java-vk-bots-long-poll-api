@@ -25,6 +25,17 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>cowr-releases</id>
+            <url>https://maven.cowr.org/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>cowr-snapshots</id>
+            <url>https://maven.cowr.org/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -55,17 +66,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
     <build>
         <testSourceDirectory>src/test/java</testSourceDirectory>
