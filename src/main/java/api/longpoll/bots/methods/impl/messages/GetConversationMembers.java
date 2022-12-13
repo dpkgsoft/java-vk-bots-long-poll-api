@@ -85,6 +85,12 @@ public class GetConversationMembers extends VkMethod<GetConversationMembers.Resp
             private boolean isAdmin;
 
             /**
+             * Whether the user is conversation owner.
+             */
+            @SerializedName("is_owner")
+            private boolean isOwner;
+
+            /**
              * Whether the user can kick.
              */
             @SerializedName("can_kick")
@@ -122,6 +128,14 @@ public class GetConversationMembers extends VkMethod<GetConversationMembers.Resp
                 isAdmin = admin;
             }
 
+            public boolean isOwner() {
+                return isOwner;
+            }
+
+            public void setOwner(boolean owner) {
+                isOwner = owner;
+            }
+
             public Boolean getCanKick() {
                 return canKick;
             }
@@ -138,6 +152,7 @@ public class GetConversationMembers extends VkMethod<GetConversationMembers.Resp
                         ", invitedBy=" + invitedBy +
                         ", joinDate=" + joinDate +
                         ", admin=" + isAdmin +
+                        ", owner=" + isOwner +
                         ", canKick=" + canKick +
                         '}';
             }
