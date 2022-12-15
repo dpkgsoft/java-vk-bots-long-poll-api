@@ -383,6 +383,19 @@ public class User {
     private Boolean online;
 
     /**
+     * Whether the user is online from mobile.
+     */
+    @SerializedName("online_mobile")
+    @JsonAdapter(BoolIntDeserializer.class)
+    private Boolean onlineMobile;
+
+    /**
+     * Which application user uses to get online
+     */
+    @SerializedName("online_app")
+    private int onlineApp;
+
+    /**
      * Information from the "Personal views" section.
      */
     @SerializedName("personal")
