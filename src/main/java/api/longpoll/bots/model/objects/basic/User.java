@@ -1279,6 +1279,22 @@ public class User {
                 '}';
     }
 
+    public Boolean getOnlineMobile() {
+        return onlineMobile;
+    }
+
+    public void setOnlineMobile(Boolean onlineMobile) {
+        this.onlineMobile = onlineMobile;
+    }
+
+    public int getOnlineApp() {
+        return onlineApp;
+    }
+
+    public void setOnlineApp(int onlineApp) {
+        this.onlineApp = onlineApp;
+    }
+
     /**
      * Describes career.
      */
