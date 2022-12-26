@@ -48,6 +48,18 @@ public class Message implements Update.Object {
     private String text;
 
     /**
+     * Referral (ref)
+     */
+    @SerializedName("ref")
+    private String ref;
+
+    /**
+     * Referral source (ref_source)
+     */
+    @SerializedName("ref_source")
+    private String refSource;
+
+    /**
      * Parameter used while sending the messages to avoid double sending.
      */
     @SerializedName("random_id")
@@ -286,6 +298,22 @@ public class Message implements Update.Object {
                 ", cropped=" + cropped +
                 ", expireTtl=" + expireTtl +
                 '}';
+    }
+
+    public String getRef() {
+        return ref;
+    }
+
+    public void setRef(String ref) {
+        this.ref = ref;
+    }
+
+    public String getRefSource() {
+        return refSource;
+    }
+
+    public void setRefSource(String refSource) {
+        this.refSource = refSource;
     }
 
     /**

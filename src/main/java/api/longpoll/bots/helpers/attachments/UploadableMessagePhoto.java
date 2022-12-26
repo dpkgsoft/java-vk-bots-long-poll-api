@@ -23,7 +23,7 @@ public abstract class UploadableMessagePhoto extends AbstractUploadableFile {
     private final SaveMessagesPhoto saveMessagesPhoto;
 
     public UploadableMessagePhoto(Integer peerId, String accessToken) {
-        this.getMessagesUploadServer = new GetMessagesUploadServer(accessToken).setPeerId(peerId);
+        this.getMessagesUploadServer = new GetMessagesUploadServer(accessToken);
         this.saveMessagesPhoto = new SaveMessagesPhoto(accessToken);
     }
 
